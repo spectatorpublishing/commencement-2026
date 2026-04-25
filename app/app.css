@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 @theme {
+  --font-serif: "DM Serif Text", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-paper: #F9F4EC;
 }
 
 html,
-body {
-  @apply bg-white dark:bg-gray-950;
+body {  
+  background-color: var(--color-paper);
+  /* TODO: undisable dark mode
+  @apply bg-white dark:bg-gray-950; 
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
-  }
+  } */
+}
+
+.article-card h2 {
+  @apply font-serif;
 }

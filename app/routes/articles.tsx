@@ -9,15 +9,23 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Articles() {
+const articleWrapper = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(333px, 1fr))",
+    judstifyContenet: "center",
+    gap: "35px",
+    listStyle: "none",
+    padding: "20px 40px",
+    alignItems: "stretch"
+};
 
+export default function Articles() {
   return (
     <main>
-      {/* <h1>Articles</h1> */}
-      <ul>
-        {all_articles.map((a) => (
+      <ul style={articleWrapper}>
+        {all_articles.map((a, i) => (
           <li key={a.article_title}>
-            <ArticleCard article={a} />
+            <ArticleCard article={a} variant={i%6} />
           </li>
         ))}
       </ul>
