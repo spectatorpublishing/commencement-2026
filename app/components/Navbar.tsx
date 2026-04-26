@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router';
+import banner from '../banner.png';
 
 const NAV_LINKS = [
   { label: 'Home',       path: '/' },
@@ -25,8 +26,8 @@ export function Navbar({ current }: { current?: string }) {
             <li key={label} className="nav-item">
               {isActive ? (
                 <Link to={path} className="nav-active-banner">
-                  {label}
-                  <span className="nav-right-tail" />
+                  <img src={banner} alt="" className="nav-banner-img" />
+                  <span className="nav-banner-label">{label}</span>
                 </Link>
               ) : (
                 <Link to={path} className="nav-link">

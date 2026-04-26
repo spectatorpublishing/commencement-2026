@@ -16,14 +16,14 @@ body {
 
 /* Navbar */
 .nav-wrapper {
-  width: 100%;
+  width: 63%;
+  margin: 112px auto 0;
   background: #F5F0E8;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  height: 44.99px;
+  border: 1px solid #000;
 }
 
 .nav-list {
@@ -53,75 +53,31 @@ body {
 }
 
 .nav-active-banner {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 0 14px;
-  height: 32px;
-  background: #D6E4F0;
-  border: 1px solid #000;
   text-decoration: none;
+  height: 44.99px;
+}
+
+.nav-banner-img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-40%) scaleX(1);
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.nav-banner-label {
+  position: relative;
+  z-index: 1;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   font-size: 25px;
   color: #000;
-}
-
-/* Left notch border (drawn behind) */
-.nav-active-banner::after {
-  content: '';
-  position: absolute;
-  left: -11px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-right: 11px solid #000;
-  z-index: -1;
-}
-
-/* Left notch fill */
-.nav-active-banner::before {
-  content: '';
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  border-right: 10px solid #D6E4F0;
-  z-index: 1;
-}
-
-/* Right tail */
-.nav-right-tail {
-  position: absolute;
-  right: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  border-left: 10px solid #D6E4F0;
-  z-index: 1;
-}
-
-/* Right tail border (drawn behind) */
-.nav-right-tail::before {
-  content: '';
-  position: absolute;
-  right: 1px;
-  top: -17px;
-  width: 0;
-  height: 0;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 11px solid #000;
-  z-index: -1;
+  white-space: nowrap;
+  padding: 0 14px;
 }
