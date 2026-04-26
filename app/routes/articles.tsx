@@ -13,10 +13,9 @@ const articleWrapper = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(333px, 1fr))",
     judstifyContenet: "center",
-    gap: "35px",
+    gap: "60px",
     listStyle: "none",
-    padding: "20px 40px",
-    alignItems: "stretch"
+    padding: "58px 80px",
 };
 
 export default function Articles() {

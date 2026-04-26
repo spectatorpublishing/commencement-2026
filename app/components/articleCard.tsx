@@ -25,9 +25,11 @@ export default function ArticleCard(props: { article: Article; variant: number }
         className="article-card"
       >
         <img className={`icon variant-${props.variant}`} src={iconMap[props.variant]} />
-        <div className="image-box">
-          <img className="image" src={props.article.image_url} alt={props.article.article_title} />
-        </div>
+          <div className="image-wrapper">
+          <div className="image-box">
+            <img className="image" src={props.article.image_url} alt={props.article.article_title} />
+          </div>
+          </div>
         <div className="content">
           <h2>{props.article.article_title}</h2>
           <p className="author">By {props.article.article_authors}</p>
