@@ -8,12 +8,12 @@ type Article = {
   };
 
 const iconMap = [
-  "public/angleTape.png",
-  "public/bluePin.png",
-  "public/flatTape.png",
-  "public/whitePin.png",
-  "public/flatTape.png",
-  "public/whitePin.png",
+  "/angleTape.png",
+  "/bluePin.png",
+  "/flatTape.png",
+  "/whitePin.png",
+  "/flatTape.png",
+  "/whitePin.png",
 ];
 
 export default function ArticleCard(props: { article: Article; variant: number }) {

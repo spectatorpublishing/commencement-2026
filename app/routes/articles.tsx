@@ -11,12 +11,12 @@ export function meta({}: Route.MetaArgs) {
 
 const articleWrapper = {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(333px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     judstifyContenet: "center",
     gap: "60px",
     listStyle: "none",
-    padding: "58px 80px",
-};
+    padding: "clamp(23px, 5vw, 58px) clamp(16px, 7vw, 80px)",
+  };
 
 export default function Articles() {
   return (
