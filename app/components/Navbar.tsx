@@ -3,12 +3,12 @@ import banner from '../banner.png';
 
 const NAV_LINKS = [
   { label: 'Home',       path: '/' },
-  { label: 'University', path: '/university' },
-  { label: 'A&C',        path: '/ac' },
-  { label: 'Sports',     path: '/sports' },
-  { label: 'Spectrum',   path: '/spectrum' },
-  { label: 'Opinion',    path: '/opinion' },
-  { label: 'Crosswords', path: '/crosswords' },
+  { label: 'University', path: '/articles/university' },
+  { label: 'A&C',        path: '/articles/ac' },
+  { label: 'Sports',     path: '/articles/sports' },
+  { label: 'Spectrum',   path: '/articles/spectrum' },
+  { label: 'Opinion',    path: '/articles/opinion' },
+  { label: 'Crosswords', path: '/articles/crosswords' },
 ];
 
 export function Navbar({ current }: { current?: string }) {

@@ -1,6 +1,7 @@
 import type { Route } from "./+types/articles";
 import { all_articles } from "../data/allarticles";
 import ArticleCard from "../components/articleCard";
+import { useParams, useNavigate } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,6 +9,16 @@ export function meta({}: Route.MetaArgs) {
     { name: "description", content: "Latest articles" },
   ];
 }
+
+const sections = [
+  { key: "university", label: "University", colorClass: "university" },
+  { key: "city", label: "City", colorClass: "city" },
+  { key: "artsCulture", label: "Arts & Culture", colorClass: "artsCulture" },
+  { key: "sports", label: "Sports", colorClass: "sports" },
+  { key: "spectrum", label: "Spectrum", colorClass: "spectrum" },
+  { key: "video", label: "Video", colorClass: "video" },
+  { key: "crosswords", label: "Crosswords", colorClass: "crosswords" },
+]
 
 const articleWrapper = {
     display: "grid",
@@ -19,6 +30,17 @@ const articleWrapper = {
   };
 
 export default function Articles() {
+  const { section } = useParams();
+  const navigate = useNavigate();
+  const openSection = section;
+
+  const toggleSection = (key) => {
+    if (openSection === key) {
+      navigate("/articles");
+    } else {
+      navigate(`/articles/${key}`);
+    }
+  };
   return (
     <main>
       <ul style={articleWrapper}>
