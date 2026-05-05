@@ -13,12 +13,12 @@ import creditsBanner    from '../assets/credits.png';
 const NAV_LINKS = [
   { label: 'Home',       path: '/',            banner: homeBanner },
   { label: 'University', path: '/university',  banner: universityBanner },
-  { label: 'A&C',        path: '/ac',          banner: acBanner },
-  { label: 'Sports',     path: '/sports',      banner: sportsBanner },
+  { label: 'A&C',        path: '/ac',          banner: spectrumBanner },
+  { label: 'Sports',     path: '/sports',      banner: homeBanner },
   { label: 'Spectrum',   path: '/spectrum',    banner: spectrumBanner },
-  { label: 'Opinion',    path: '/opinion',     banner: opinionBanner },
-  { label: 'Crosswords', path: '/crosswords',  banner: crosswordsBanner },
-  { label: 'Credits',    path: '/credits',     banner: creditsBanner },
+  { label: 'Opinion',    path: '/opinion',     banner: universityBanner },
+  { label: 'Crosswords', path: '/crosswords',  banner: spectrumBanner },
+  { label: 'Credits',    path: '/credits',     banner: homeBanner },
 ];
 
 export function Navbar({ current }: { current?: string }) {
@@ -26,7 +26,7 @@ export function Navbar({ current }: { current?: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="nav-wrapper">
+    <nav className="nav-wrapper" style={{ paddingBottom: '1rem' }}>
       <button
         className="nav-hamburger"
         onClick={() => setMenuOpen(o => !o)}
