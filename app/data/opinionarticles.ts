@@ -1,4 +1,4 @@
-const artsCulture = [
+const opinion = [
     {
       article_link: "https://www.columbiaspectator.com/arts-and-culture/2025/09/28/institute-for-the-study-of-sexuality-and-gender-hosts-drag-ball/",
       image_url: "https://www.columbiaspectator.com/resizer/v2/34PL64DSFRAULKNBBWVA2ZQFW4.jpeg?auth=e905dd469783cec07aeb18a7c49c490c5cd2e664830394aa9f32df3fa9e2a375",
@@ -26,4 +26,4 @@ const artsCulture = [
     
   ];
   
-  export default artsCulture;
+  export default opinion;

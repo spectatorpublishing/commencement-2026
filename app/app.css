@@ -41,6 +41,8 @@ body {
 /* Navbar */
 :root {
   --nav-height: clamp(36px, 5vw, 45px);
+  --page-padding-x: clamp(16px, 9vw, 80px);
+  --page-padding-y: clamp(23px, 6vw, 58px);
 }
 
 .nav-wrapper {
@@ -115,7 +117,7 @@ body {
   .nav-wrapper {
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 10px 16px;
+    padding: 10px var(--page-padding-x);
   }
 
   .nav-hamburger {
@@ -192,3 +194,12 @@ body {
   }
 }
 
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: var(--page-padding-y) var(--page-padding-x);
+}
