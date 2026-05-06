@@ -2,11 +2,8 @@ export default function Homepage() {
   return (
     <div
       style={{
-        backgroundImage: "url('/back-to-campus.jpg')", //replace with whatever image for homepage background
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        minHeight: "100vh",
+        background: "linear-gradient(180deg, #F4A9CD 0%, #67A7CA 100%)",
+        minHeight: "calc(100vh - var(--nav-height))",
       }}
     />
   );
