@@ -12,12 +12,12 @@ import creditsBanner    from '../assets/credits.png';
 
 const NAV_LINKS = [
   { label: 'Home',       path: '/',            banner: homeBanner },
-  { label: 'University', path: '/university',  banner: universityBanner },
-  { label: 'A&C',        path: '/ac',          banner: spectrumBanner },
-  { label: 'Sports',     path: '/sports',      banner: homeBanner },
-  { label: 'Spectrum',   path: '/spectrum',    banner: spectrumBanner },
-  { label: 'Opinion',    path: '/opinion',     banner: universityBanner },
-  { label: 'Crosswords', path: '/crosswords',  banner: spectrumBanner },
+  { label: 'University', path: '/articles/university',  banner: universityBanner },
+  { label: 'A&C',        path: '/articles/ac',          banner: spectrumBanner },
+  { label: 'Sports',     path: '/articles/sports',      banner: homeBanner },
+  { label: 'Spectrum',   path: '/articles/spectrum',    banner: spectrumBanner },
+  { label: 'Opinion',    path: '/articles/opinion',     banner: universityBanner },
+  { label: 'Crosswords', path: '/articles/crosswords',  banner: spectrumBanner },
   { label: 'Credits',    path: '/credits',     banner: homeBanner },
 ];
 

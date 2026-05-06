@@ -16,7 +16,7 @@ const iconMap = [
   "/whitePin.png",
 ];
 
-export default function ArticleCard(props: { article: Article; variant: number }) {
+export default function ArticleCard(props: { article: Article; variant: number; num: number}) {
   return (
       <a
         href={props.article.article_link}
@@ -24,7 +24,9 @@ export default function ArticleCard(props: { article: Article; variant: number }
         rel="noopener noreferrer"
         className="article-card"
       >
-        <img className={`icon variant-${props.variant}`} src={iconMap[props.variant]} />
+        {props.num > 1 && (
+          <img className={`icon variant-${props.variant}`} src={iconMap[props.variant]} />
+        )}
           <div className="image-wrapper">
           <div className="image-box">
             <img className="image" src={props.article.image_url} alt={props.article.article_title} />
