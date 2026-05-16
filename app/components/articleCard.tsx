@@ -16,13 +16,13 @@ const iconMap = [
   "/whitePin.png",
 ];
 
-export default function ArticleCard(props: { article: Article; variant: number; num: number}) {
+export default function ArticleCard(props: { article: Article; variant: number; num: number; compact?: boolean}) {
   return (
       <a
         href={props.article.article_link}
         target="_blank"
         rel="noopener noreferrer"
-        className="article-card"
+        className={`article-card ${props.compact ? 'article-card--compact' : ''}`}
       >
         {props.num > 1 && (
           <img className={`icon variant-${props.variant}`} src={iconMap[props.variant]} />

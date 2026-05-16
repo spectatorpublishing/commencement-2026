@@ -1,27 +1,27 @@
 const artsCulture = [
     {
-      article_link: "https://www.columbiaspectator.com/arts-and-culture/2025/09/28/institute-for-the-study-of-sexuality-and-gender-hosts-drag-ball/",
-      image_url: "https://www.columbiaspectator.com/resizer/v2/34PL64DSFRAULKNBBWVA2ZQFW4.jpeg?auth=e905dd469783cec07aeb18a7c49c490c5cd2e664830394aa9f32df3fa9e2a375",
-      article_title: "Institute for the Study of Sexuality and Gender hosts drag ball",
-      article_authors: "Beatrice Moyers",
+      article_link: "https://www.columbiaspectator.com/arts-and-culture/2026/04/26/up-close-and-personal-photographer-will-park-cc-26-captures-liveliness-with-a-focus-on-genuine-connection/",
+      image_url: "https://www.columbiaspectator.com/resizer/v2/EZPOI454CVDZLP4RBXQJX7GDME.jpeg?auth=a49f0c26512e5578eec9569a6af42069b3e8447398c4338780d867b8ee07212f",
+      article_title: "Up close and personal: Photographer Will Park, CC ’26, captures liveliness with a focus on genuine connection",
+      article_authors: "Sarah O'Grady",
     },
     {
-      article_link: "https://www.columbiaspectator.com/arts-and-culture/2025/10/07/review-wallach-art-gallery-projects-the-queer-experience-in-homage-queer-lineages-on-video/",
-      image_url: "https://www.columbiaspectator.com/resizer/v2/T2N5CCGAFREGDF2J6PRRIYVWVY.jpeg?auth=315635e48069acbb41022cef2e7aca552efe44362a621657ad318bc0dd63761a",
-      article_title: "Review: Wallach Art Gallery projects the queer experience in ‘Homage: Queer lineages on video’",
-      article_authors: "Ian Romero",
+      article_link: "https://www.columbiaspectator.com/arts-and-culture/2026/05/04/putting-the-heart-in-horror-zelda-adams-cc-26-is-a-multi-hyphenate-creative/",
+      image_url: "https://www.columbiaspectator.com/resizer/v2/SVL3PXA6CJG7VNGTD3OGFWW55I.JPEG?auth=91aab95ddcd25ac33853ba4f5ae4514d020a845797ab159def15c8b242c6d338",
+      article_title: "Putting the heart in horror: Zelda Adams, CC ’26, is a multi-hyphenate creative’",
+      article_authors: "Sarah O'Grady",
     },
     {
-      article_link: "https://www.columbiaspectator.com/arts-and-culture/2025/10/08/out-of-waack-vince-nguyen-mph-23-on-epidemiology-waacking-and-his-queer-identity/",
-      image_url: "https://www.columbiaspectator.com/resizer/v2/AWAGNTNVPBDYFP6IE7EVCWY5EY.jpg?auth=6970b87674ad6668216da06b1044647bbfcca72b1e6faf3872af85a8f2cfe8b5",
-      article_title: "Out of Waack: Vince Nguyen, MPH ’23, on epidemiology, waacking, and his queer identity’",
-      article_authors: "Joyce Zhang",
+      article_link: "https://www.columbiaspectator.com/arts-and-culture/2026/05/10/gsapp-course-invites-celebrities-experts-to-end-of-semester-critique/",
+      image_url: "https://www.columbiaspectator.com/resizer/v2/W6TG3ZKIJNBSXPRKCGWTA2E3TQ.png?auth=0ad4a0e97e17d15df0e2e8d7f5adaec7d80bec941d73e00e9976d17742db1299",
+      article_title: "GSAPP course invites celebrities, experts to end-of-semester critique",
+      article_authors: "Sarah O'Grady",
     },
     {
-      article_link: "https://www.columbiaspectator.com/arts-and-culture/2025/10/12/wallach-art-gallerys-homage-queer-lineages-on-video-pays-tribute-to-underrepresented-histories-through-time-based-media/",
-      image_url: "https://www.columbiaspectator.com/resizer/v2/VEM7LVEKJVHMRPGUFBG7UHHHSM.jpeg?auth=3b1a8da7e7978aff4a0d118889b202c5a1533264583b6aecfeecdaa6e9eec73e",
-      article_title: "Wallach Art Gallery’s ‘Homage: Queer lineages on video’ pays tribute to underrepresented histories through time-based media",
-      article_authors: "Lily O'Brien",
+      article_link: "https://www.columbiaspectator.com/arts-and-culture/2026/04/30/an-extended-lunchbox-note-jodi-kantor-cc-96-on-how-her-commencement-address-inspired-a-new-book/",
+      image_url: "https://www.columbiaspectator.com/resizer/v2/533UV4GWIZHJXDZXGQGVN62VM4.png?auth=da895517285805f1fda32462352b1b1467b581935cdb8fc5879dde1ed4835693",
+      article_title: "An ‘extended lunchbox note’: Jodi Kantor, CC ’96, on how her Commencement address inspired a new book",
+      article_authors: "Sonia Freedman",
     },
     
   ];
