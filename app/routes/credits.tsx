@@ -9,7 +9,7 @@ export default function Credits() {
         THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE<br />THIS ISSUE POSSIBLE
       </h1>
 
-      <div style={{ columns: 2, columnGap: "64px", maxWidth: "900px", margin: "0 auto" }}>
+      <div style={{ columns: 3, columnGap: "64px", margin: "0 auto" }}>
         {Object.entries(credits).map(([section, members]) => (
           <div key={section} style={{ breakInside: "avoid", marginBottom: "40px" }}>
             <h2 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "12px" }}>{section}</h2>

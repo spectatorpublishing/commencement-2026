@@ -15,10 +15,11 @@ const NAV_LINKS = [
   { label: 'University', path: '/articles/university',  banner: universityBanner },
   { label: 'A&C',        path: '/articles/ac',          banner: spectrumBanner },
   { label: 'Sports',     path: '/articles/sports',      banner: homeBanner },
-  { label: 'Spectrum',   path: '/articles/spectrum',    banner: spectrumBanner },
-  { label: 'Opinion',    path: '/articles/opinion',     banner: universityBanner },
-  { label: 'Crosswords', path: '/articles/crosswords',  banner: spectrumBanner },
-  { label: 'Credits',    path: '/credits',     banner: homeBanner },
+  { label: 'Spectrum',   path: '/articles/spectrum',    banner: universityBanner },
+  { label: 'Opinion',    path: '/articles/opinion',     banner: spectrumBanner },
+  { label: 'Audio',      path: '/articles/audio',       banner: homeBanner },
+  { label: 'Crosswords', path: '/articles/crosswords',  banner: universityBanner },
+  { label: 'Credits',    path: '/credits',     banner: spectrumBanner },
 ];
 
 export function Navbar({ current }: { current?: string }) {
