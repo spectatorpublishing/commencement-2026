@@ -1,6 +1,4 @@
 import type { Route } from "./+types/home";
-import Articles from "./articles";
-import { Link } from "react-router";
 import Homepage from "./Homepage";
 
 export function meta({}: Route.MetaArgs) {

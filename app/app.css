@@ -45,6 +45,124 @@ body {
   --page-padding-y: clamp(23px, 6vw, 58px);
 }
 
+.homepage-shell {
+  position: relative;
+  height: 860px;
+  background: linear-gradient(180deg, #f4a9cd 0%, #67a7ca 100%);
+  overflow: hidden;
+}
+
+.homepage-board-viewport {
+  display: contents;
+}
+
+.homepage-desktop-board {
+  position: relative;
+  height: 860px;
+  overflow: hidden;
+}
+
+.homepage-stars {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.homepage-stars--top {
+  top: -123px;
+}
+
+.homepage-stars--bottom {
+  top: 646px;
+}
+
+.homepage-art {
+  position: absolute;
+}
+
+.homepage-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.homepage-art--image1 {
+  top: 50px;
+  left: 100px;
+  width: 329px;
+}
+
+.homepage-art--university {
+  top: 100px;
+  left: 550px;
+  width: 418px;
+}
+
+.homepage-art--image2 {
+  top: 180px;
+  left: 1083px;
+  width: 212.37px;
+}
+
+.homepage-art--letter-from-editor {
+  top: 250px;
+  left: 876px;
+  width: 520px;
+}
+
+.homepage-art--spectrum {
+  top: 400px;
+  left: 220px;
+  width: 373.24px;
+}
+
+.credits-page {
+  min-height: 100svh;
+  color: #111;
+  text-align: center;
+  padding: clamp(24px, 5vw, 48px) var(--page-padding-x) 64px;
+}
+
+.credits-title {
+  margin: 0 auto clamp(24px, 5vw, 48px);
+  max-width: none;
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.credits-grid {
+  columns: 3;
+  column-gap: 64px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.credits-section {
+  break-inside: avoid;
+  margin-bottom: 40px;
+}
+
+.credits-section-title {
+  margin: 0 0 12px;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+.credits-member {
+  margin: 4px 0;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+  line-height: 1.35;
+  word-break: break-word;
+  text-align: center;
+}
+
 .nav-wrapper {
   width: 100%;
   margin: 0;
@@ -191,6 +309,59 @@ body {
 
   .nav-banner-label {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .homepage-shell {
+    min-height: calc(100svh - var(--nav-height));
+    height: auto;
+    padding: 12px 0 24px;
+    box-sizing: border-box;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .homepage-board-viewport {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: calc(860px * var(--homepage-scale, 1));
+    overflow: hidden;
+  }
+
+  .homepage-desktop-board {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1485px;
+    height: 860px;
+    min-height: 860px;
+    overflow: hidden;
+    transform: translateX(-50%) scale(var(--homepage-scale, 1));
+    transform-origin: top center;
+  }
+
+  .credits-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .credits-page {
+    padding-inline: 16px;
+  }
+
+  .credits-grid {
+    columns: 1;
+    column-gap: 0;
+  }
+
+  .credits-title {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    white-space: normal;
+    text-wrap: balance;
   }
 }
 

@@ -5,39 +5,80 @@ import University from "../assets/home-uni.png"
 import Image2 from "../assets/home-img-2.png"
 import LFE from "../assets/home-lfe.png"
 import Spectrum from "../assets/home-spectrum.png"
-import { Link } from 'react-router';
+import { Link } from "react-router";
+import { useEffect, useRef, useState } from "react";
+
+const DESKTOP_BOARD_WIDTH = 1485;
+const DESKTOP_BOARD_HEIGHT = 860;
 
 export default function Homepage() {
+  const [scale, setScale] = useState(1);
+  const shellRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const updateScale = () => {
+      if (window.innerWidth > 960) {
+        setScale(1);
+        return;
+      }
+
+      const shellTop = shellRef.current?.getBoundingClientRect().top ?? 0;
+      const availableWidth = window.innerWidth - 24;
+      const availableHeight = window.innerHeight - shellTop - 24;
+      const widthScale = availableWidth / DESKTOP_BOARD_WIDTH;
+      const heightScale = availableHeight / DESKTOP_BOARD_HEIGHT;
+      setScale(Math.min(1, widthScale, heightScale));
+    };
+
+    updateScale();
+    window.addEventListener("resize", updateScale);
+
+    return () => window.removeEventListener("resize", updateScale);
+  }, []);
+
   return (
-    <div
-      style={{
-        background: "linear-gradient(180deg, #F4A9CD 0%, #67A7CA 100%)",
-        height: 860,
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <img src={UpperStars} alt="" width="1485" height="836"
-        style={{top: -123, position: "absolute"}}/>
-      <img src={LowerStars} alt="" width="1485" height="836"
-        style={{top: 646, position: "absolute"}}/>
-      <img src={Image1} alt="" width="329" height="218"
-        style={{top: 50, left: 100, position: "absolute"}}/>
-      <Link to="/articles/university">
-        <img src={University} alt="" width="418" height="171"
-        style={{top: 100, left: 550, position: "absolute"}}/>
-      </Link>
-      <img src={Image2} alt="" width="212.37" height="198.47"
-        style={{top: 180, left: 1083, position: "absolute"}}/>
-      <Link to="/letter-from-editor">
-        <img src={LFE} alt="" width="520" height="292.5"
-          style={{top: 250, left: 876, position: "absolute"}}/>
-      </Link>
-      <Link to="/articles/spectrum">
-        <img src={Spectrum} alt="" width="373.24" height="229.54"
-          style={{top: 400, left: 220, position: "absolute"}}/>
-      </Link>
-      
-    </div>
+    <main ref={shellRef} className="homepage-shell" style={{ ["--homepage-scale" as string]: scale }}>
+      <div className="homepage-board-viewport">
+        <div className="homepage-desktop-board" aria-hidden="true">
+          <img
+            src={UpperStars}
+            alt=""
+            width="1485"
+            height="836"
+            className="homepage-stars homepage-stars--top"
+          />
+          <img
+            src={LowerStars}
+            alt=""
+            width="1485"
+            height="836"
+            className="homepage-stars homepage-stars--bottom"
+          />
+          <img
+            src={Image1}
+            alt=""
+            width="329"
+            height="218"
+            className="homepage-art homepage-art--image1"
+          />
+          <Link to="/articles/university" className="homepage-art homepage-art--university">
+            <img src={University} alt="University" width="418" height="171" />
+          </Link>
+          <img
+            src={Image2}
+            alt=""
+            width="212.37"
+            height="198.47"
+            className="homepage-art homepage-art--image2"
+          />
+          <Link to="/letter-from-editor" className="homepage-art homepage-art--letter-from-editor">
+            <img src={LFE} alt="Letter from the Editor" width="520" height="292.5" />
+          </Link>
+          <Link to="/articles/spectrum" className="homepage-art homepage-art--spectrum">
+            <img src={Spectrum} alt="Spectrum" width="373.24" height="229.54" />
+          </Link>
+        </div>
+      </div>
+    </main>
   );
 }

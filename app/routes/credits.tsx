@@ -4,17 +4,19 @@ type CreditMember = { name: string; role: string };
 
 export default function Credits() {
   return (
-    <main style={{ minHeight: "100vh", color: "black", textAlign: "center", padding: "2rem var(--page-padding-x)" }}>
-      <h1 style={{ fontSize: "1.6rem", fontWeight: 700, letterSpacing: "0.05em", marginBottom: "3rem" }}>
-        THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE<br />THIS ISSUE POSSIBLE
+    <main className="credits-page">
+      <h1 className="credits-title">
+        THE COLUMBIA DAILY SPECTATOR STAFF WHO MADE THIS ISSUE POSSIBLE
       </h1>
 
-      <div style={{ columns: 3, columnGap: "64px", margin: "0 auto", maxWidth: 1200 }}>
+      <div className="credits-grid">
         {Object.entries(credits).map(([section, members]) => (
-          <div key={section} style={{ breakInside: "avoid", marginBottom: "40px" }}>
-            <h2 style={{ fontWeight: 700, fontSize: "1.1rem", marginBottom: "12px" }}>{section}</h2>
+          <div key={section} className="credits-section">
+            <h2 className="credits-section-title">{section}</h2>
             {(members as CreditMember[]).map((member, i) => (
-              <p key={i} style={{ margin: "4px 0", fontSize: "1rem" }}>{member.name}, {member.role}</p>
+              <p key={i} className="credits-member">
+                {member.name}, {member.role}
+              </p>
             ))}
           </div>
         ))}

@@ -71,3 +71,64 @@
     flex: 1;
     max-width: 750px; 
 }
+
+@media (max-width: 900px) {
+    .letter-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 16px 28px;
+        gap: 20px;
+    }
+
+    .left-side {
+        display: none;
+    }
+
+    .right-side {
+        width: 100%;
+        max-width: 750px;
+        margin-right: 0;
+    }
+
+    .letter-box {
+        padding: 24px 18px;
+        border-width: 6px;
+    }
+
+    .letter-header {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .letter-header h2 {
+        font-size: clamp(1.5rem, 6vw, 2.25rem);
+        line-height: 1;
+    }
+
+    .letter-header img {
+        width: clamp(42px, 12vw, 60px);
+    }
+
+    .letter-box p {
+        font-size: clamp(1rem, 3.8vw, 1.125rem);
+        line-height: 1.55;
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .letter-page {
+        padding: 16px 12px 22px;
+        gap: 16px;
+    }
+
+    .letter-box {
+        padding: 18px 14px;
+        border-width: 5px;
+    }
+
+    .letter-box p {
+        font-size: 0.98rem;
+        line-height: 1.5;
+    }
+}
