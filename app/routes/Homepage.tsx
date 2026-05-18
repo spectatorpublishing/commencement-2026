@@ -12,28 +12,30 @@ export default function Homepage() {
     <div
       style={{
         background: "linear-gradient(180deg, #F4A9CD 0%, #67A7CA 100%)",
-        minHeight: 1024,
+        height: 860,
+        position: "relative",
+        overflow: "hidden",
       }}
     >
       <img src={UpperStars} alt="" width="1485" height="836"
-        style={{top: -123}}/>
+        style={{top: -123, position: "absolute"}}/>
       <img src={LowerStars} alt="" width="1485" height="836"
-        style={{top: 646}}/>
+        style={{top: 646, position: "absolute"}}/>
       <img src={Image1} alt="" width="329" height="218"
-        style={{top: 216, left: 100, position: "absolute"}}/>
+        style={{top: 50, left: 100, position: "absolute"}}/>
       <Link to="/articles/university">
         <img src={University} alt="" width="418" height="171"
-        style={{top: 278, left: 584, position: "absolute"}}/>
+        style={{top: 100, left: 550, position: "absolute"}}/>
       </Link>
       <img src={Image2} alt="" width="212.37" height="198.47"
-        style={{top: 444, left: 1083, position: "absolute"}}/>
+        style={{top: 180, left: 1083, position: "absolute"}}/>
       <Link to="/letter-from-editor">
         <img src={LFE} alt="" width="520" height="292.5"
-          style={{top: 556, left: 876, position: "absolute"}}/>
+          style={{top: 250, left: 876, position: "absolute"}}/>
       </Link>
       <Link to="/articles/spectrum">
         <img src={Spectrum} alt="" width="373.24" height="229.54"
-          style={{top: 636, left: 220, position: "absolute"}}/>
+          style={{top: 400, left: 220, position: "absolute"}}/>
       </Link>
       
     </div>
