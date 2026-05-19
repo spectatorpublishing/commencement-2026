@@ -76,18 +76,41 @@
     .letter-page {
         flex-direction: column;
         align-items: center;
-        padding: 20px 16px 28px;
-        gap: 20px;
+        padding: 20px 16px 0px;   
+        gap: 0;
     }
 
     .left-side {
-        display: none;
+        display: flex;      
+        flex-direction: row;     
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        order: 2;               
+        margin-top: -40px;       
+        pointer-events: none;
+    }
+
+    .left-side img:first-child {  
+        width: clamp(120px, 35vw, 200px);
+        height: auto;
+        margin-right: 0;
+        align-self: flex-end;
+    }
+
+    .left-side img:last-child {  
+        width: clamp(140px, 42vw, 240px);
+        height: auto;
+        margin-top: 0;
+        margin-left: 0;
+        align-self: flex-end;
     }
 
     .right-side {
         width: 100%;
         max-width: 750px;
         margin-right: 0;
+        order: 1;         
     }
 
     .letter-box {
