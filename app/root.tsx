@@ -58,14 +58,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <header className="site-header">
-        <a href="https://www.columbiaspectator.com/" target="_blank" rel="noopener noreferrer">
-          <img src={specHeader} alt="Columbia Daily Spectator" className="site-header-logo" />
-        </a>
-      </header>
-      <Navbar />
-      <Outlet />
-    </>
+      <div style={{ position: 'relative' }}>
+        <header className="site-header">
+          <a href="https://www.columbiaspectator.com/" target="_blank" rel="noopener noreferrer">
+            <img src={specHeader} alt="Columbia Daily Spectator" className="site-header-logo" />
+          </a>
+        </header>
+        <Navbar />
+        </div>
+        <Outlet />
+      </>
   );
 }
 

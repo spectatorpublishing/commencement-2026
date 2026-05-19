@@ -235,11 +235,13 @@ body {
   .nav-wrapper {
     justify-content: flex-end;
     align-items: flex-start;
-    padding: 10px var(--page-padding-x);
+    padding: 0px var(--page-padding-x);
+    min-height: 0;
   }
 
   .nav-hamburger {
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -250,6 +252,8 @@ body {
     cursor: pointer;
     padding: 0;
     gap: 5px;
+    top: -2.7rem;
+    right: 1.8rem;
   }
 
   .nav-hamburger-icon,
