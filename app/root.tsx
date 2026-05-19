@@ -37,6 +37,17 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export const meta: Route.MetaFunction = () => [
+  { title: "Commencement 2026" },
+  { name: "description", content: "Commencement 2026 Special Edition" },
+  { property: "og:title", content: "Commencement 2026 Special Edition" },
+  { property: "og:image", content: "https://commencement2026.columbiaspectator.com/background.png" },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:title", content: "Commencement 2026 Special Edition" },
+  { name: "twitter:image", content: "https://commencement2026.columbiaspectator.com/background.png" },
+  { name: "twitter:site", content: "@ColumbiaSpec" },
+];
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
