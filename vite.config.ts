@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter()],
+  base: process.env.PUBLIC_URL || "/",
   resolve: {
     tsconfigPaths: true,
   },
