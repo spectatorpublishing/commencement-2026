@@ -70,7 +70,7 @@ body {
 }
 
 .homepage-stars--top {
-  top: -123px;
+  top: -250px;
 }
 
 .homepage-stars--bottom {
@@ -89,32 +89,45 @@ body {
 
 .homepage-art--image1 {
   top: 50px;
-  left: 100px;
+  left: 60px;
   width: 329px;
 }
 
 .homepage-art--university {
-  top: 100px;
+  top: 50px;
   left: 550px;
   width: 418px;
 }
 
 .homepage-art--image2 {
-  top: 180px;
-  left: 1083px;
+  top: 100px;
+  left: 1150px;
   width: 212.37px;
 }
 
 .homepage-art--letter-from-editor {
-  top: 50px;
+  top: 150px;
   left: 876px;
   width: 520px;
 }
 
 .homepage-art--spectrum {
-  top: 400px;
-  left: 220px;
+  top: 520px;
+  left: 50px;
   width: 373.24px;
+}
+
+.homepage-center-text {
+  position: absolute;
+  top: 22rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-family: 'Source Serif 4', serif;
+  font-size: 4rem;
+  color: white;
+  z-index: 20;
+  
 }
 
 .credits-page {

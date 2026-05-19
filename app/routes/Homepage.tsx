@@ -64,13 +64,18 @@ export default function Homepage() {
           <Link to="/articles/university" className="homepage-art homepage-art--university">
             <img src={University} alt="University" width="418" height="171" />
           </Link>
+
+          <div className="homepage-center-text">
+            2026 Commencement Edition
+          </div>
+          
           <img
             src={Image2}
             alt=""
             width="212.37"
             height="198.47"
             className="homepage-art homepage-art--image2"
-            style={{ position: "relative", zIndex: 10 }}  // no pointerEvents: none
+            style={{ position: "relative", zIndex: 10 }}  
           />
           <Link
             to="/letter-from-editor"
