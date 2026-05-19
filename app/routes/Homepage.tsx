@@ -70,8 +70,13 @@ export default function Homepage() {
             width="212.37"
             height="198.47"
             className="homepage-art homepage-art--image2"
+            style={{ position: "relative", zIndex: 10 }}  // no pointerEvents: none
           />
-          <Link to="/letter-from-editor" className="homepage-art homepage-art--letter-from-editor">
+          <Link
+            to="/letter-from-editor"
+            className="homepage-art homepage-art--letter-from-editor"
+            style={{ display: "inline-block", width: 520, height: 292.5, position: "relative", zIndex: 5 }}
+          >
             <img src={LFE} alt="Letter from the Editor" width="520" height="292.5" />
           </Link>
           <Link to="/articles/spectrum" className="homepage-art homepage-art--spectrum">
