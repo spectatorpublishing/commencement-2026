@@ -5,6 +5,16 @@ import University from "../assets/home-uni.png"
 import Image2 from "../assets/home-img-2.png"
 import LFE from "../assets/home-lfe.png"
 import Spectrum from "../assets/home-spectrum.png"
+
+// Mobile-specific assets
+import MobileTopStars from "../assets/mobile-topstars.png"
+import MobileBottomStars from "../assets/mobile-bottomstars.png"
+import MobileImg1 from "../assets/mobile-img1.png"
+import MobileImg2 from "../assets/mobile-img2.png"
+import MobileLFE from "../assets/mobile-lfe.png"
+import MobileSpectrum from "../assets/mobile-spectrum.png"
+import MobileUni from "../assets/mobile-uni.png"
+
 import { Link } from "react-router";
 import { useEffect, useRef, useState } from "react";
 
@@ -14,10 +24,14 @@ const DESKTOP_BOARD_HEIGHT = 860;
 export default function Homepage() {
   const [scale, setScale] = useState(1);
   const shellRef = useRef<HTMLElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateScale = () => {
-      if (window.innerWidth > 960) {
+      const mobile = window.innerWidth <= 960;
+      setIsMobile(mobile);
+
+      if (!mobile) {
         setScale(1);
         return;
       }
@@ -32,9 +46,34 @@ export default function Homepage() {
 
     updateScale();
     window.addEventListener("resize", updateScale);
-
     return () => window.removeEventListener("resize", updateScale);
   }, []);
+
+  if (isMobile) {
+    return (
+      <main className="homepage-mobile-shell">
+        <img src={MobileTopStars} alt="" className="mobile-stars mobile-stars--top" />
+        <img src={MobileBottomStars} alt="" className="mobile-stars mobile-stars--bottom" />
+
+        <Link to="/articles/university" className="mobile-art mobile-art--uni">
+          <img src={MobileUni} alt="University" />
+        </Link>
+        <Link to="/letter-from-editor" className="mobile-art mobile-art--lfe">
+          <img src={MobileLFE} alt="Letter from the Editor" />
+        </Link>
+        <Link to="/articles/spectrum" className="mobile-art mobile-art--spectrum">
+          <img src={MobileSpectrum} alt="Spectrum" />
+        </Link>
+
+        <div className="mobile-center-text">
+          2026 Commencement Edition
+        </div>
+
+        <img src={MobileImg1} alt="" className="mobile-art mobile-art--img1" />
+        <img src={MobileImg2} alt="" className="mobile-art mobile-art--img2" />
+      </main>
+    );
+  }
 
   return (
     <main ref={shellRef} className="homepage-shell" style={{ ["--homepage-scale" as string]: scale }}>
